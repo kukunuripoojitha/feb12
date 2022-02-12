@@ -1,0 +1,52 @@
+''' PROGRAM ABOUT SUPERMARKET BILLING
+bill>=300
+    coupon code-NO OFFER-10%
+    coupon code-TRY UR LUCK-30%
+bill>=600
+    coupon code-NO OFFER-40%
+    coupon code-TRY UR LUCK-80%
+'''
+co=178
+ch=88
+ri=599
+pa=66
+su=150
+cname=input('enter customer name:')
+cphno=input('enter customer phone number:')
+coq=int(input('enter no of cooking oil bottles:'))
+chq=int(input('enter no of cheese boxes:'))
+riq=int(input('enter no of rice packets:'))
+paq=int(input('enter no of pasta packets:'))
+suq=int(input('enter no of sugar packets:'))
+cc=input('enter coupon code:')
+bill=(co*coq)+(ch*chq)+(ri*riq)+(pa*paq)+(su*suq)
+if bill>=600:
+   if(cc=='TRY UR LUCK'):
+     dis=bill*80/100
+     tax=0 
+   if(cc=='NO OFFER'):
+       dis=bill*40/100
+       tax=0 
+elif bill>=300:
+    if(cc=='NO OFFER'):
+        dis==bill*10/100
+        tax=bill*6/100
+    if(cc=='TRY UR LUCK'):
+        dis=bill*30/100
+        tax=bill*6/100
+else:
+    print('invalid cupoun code')
+    
+mainbill=bill-dis+tax
+
+print('bill amount:',mainbill)
+output:
+enter customer name:poojitha.k
+enter customer phone number:6666666666
+enter no of cooking oil bottles:2
+enter no of cheese boxes:3
+enter no of rice packets:2
+enter no of pasta packets:4
+enter no of sugar packets:2
+enter coupon code:TRY UR LUCK
+bill amount: 476.4000000000001
