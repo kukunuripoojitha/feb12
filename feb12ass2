@@ -1,0 +1,15 @@
+a=int(input('enter a number:'))
+b=int(input('enter b number:'))
+if a==b:
+    print('a and b are equal')
+elif a!=b:
+    print('a and b are not equal')
+if a>b:
+    print('a is greater than b')
+else:
+    print ('a is smaller than b')
+output: 
+enter a number:6
+enter b number:9
+a and b are not equal
+a is smaller than b
